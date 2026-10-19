@@ -9,7 +9,7 @@ import (
 	"os"
 	"path/filepath"
 	"time"
-
+    
 	"github.com/bootdotdev/learn-web-security/internal/account"
 	"github.com/bootdotdev/learn-web-security/internal/accounts"
 	"github.com/bootdotdev/learn-web-security/internal/admin"
@@ -235,6 +235,7 @@ func New(database *sql.DB, logger *logging.Logger, options Options) (*Applicatio
 
 	handler := applyMiddleware(
 		mainMux,
+		nosniff,
 		cspNonce,
 		recoverPanics(logger, renderer),
 	)

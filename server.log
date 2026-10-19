@@ -1,0 +1,3 @@
+Bearly Secure is running at http://localhost:3030
+2026/10/08 13:19:19 serve HTTP server: listen tcp :3030: bind: address already in use
+exit status 1
